@@ -15,7 +15,7 @@ request_line([$G, $E, $T, 32 |R0]) ->
 
 request_uri([32|R0])->
 	{[], R0};
-	request_uri([C|R0]) ->
+request_uri([C|R0]) ->
 	{Rest, R1} = request_uri(R0),
 	{[C|Rest], R1}.
 

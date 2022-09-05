@@ -5,8 +5,8 @@
 \usepackage{url}
 
 %opening
-\title{Report X: Homework Report Template}
-\author{Your name}
+\title{Report 2: Rudy homework report}
+\author{Douglas Hammarstam}
 \date{\today{}}
 
 \begin{document}
@@ -15,19 +15,33 @@
 
 \section{Introduction}
 
-\textit{Summary of the work you've done, what are the topics we cover
-  in this seminar, etc. Remember that you should deliver this report
-  at the start of the seminar.}
+\textit{In this project, a simple web server has been implemented.}
 
-What is the main topic related to distributed systems covered in this seminar?
-Why is it important?
+In this seminar, the main topic covered was the HTTP-protocol and how to parse it using Erlang.
+Furthermore, the seminar covered how to use the gen-tcp
+package in order to receive network HTTP-requests and handle the requests by
+using above mentioned parsing of the HTTP request.  
+
+This is important in order to get an understanding of how to use Erlang in order to efficiently parse HTTP-requests (strings)
+using recursion.
+
+It is also important in order to understand basic Erlang features like recursion, pattern-matching aswell as spawning processes in order to distribute an application on multiple threads.
 
 \section{Main problems and solutions}
 
-\textit{Summarize your problems, proposed solutions, etc. You do not
+\textit{
+
+The first problem in the assignment was to parse the incoming HTTP-request. This was done by dividing the problem into different sections;
+Firstly, parsing the method used in the request (GET). Then the URL is received by parsing each character after the space (32) character after the GET string until we reach another space character (32).
+Secondly, we get the HTTP-version (v10 or v11) by simply pattern matching the string to either of those values.
+Thirdly, we parse a line-break character followed by the headers, which we also recursively parse each 
+
+
+Summarize your problems, proposed solutions, etc. You do not
   need to copy\&paste your code. Only if needed, you may write down
   small code snipeds to show how you have solved a specific
   problem/question.}
+
 
 Did you find any specific problem with the development of your
 solution?  How did you solve it?
