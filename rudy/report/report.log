@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  5 SEP 2022 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  6 SEP 2022 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,50 +110,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 14.
 
-Runaway argument?
-{ 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.43   problem/question.}
-                         
-? 
+Overfull \hbox (21.5746pt too wide) in paragraph at lines 42--43
+[]\OT1/cmr/m/n/10.95 The pack-age also pro-vides the pos-si-bil-ity to ac-cept 
+in-com-ing TCP-connections. 
+ []
+
 [1
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-! Too many }'s.
-<recently read> \egroup 
-                        
-l.43   problem/question.}
-                         
-? 
 
-LaTeX Warning: Reference `fig:results2 ' on page 2 undefined on input line 63.
+LaTeX Warning: Reference `fig:results2 ' on page 2 undefined on input line 90.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 67.
-<results1.pdf, id=11, 361.35pt x 252.945pt>
+(Font)              <10.95> on input line 94.
+<results1.pdf, id=12, 361.35pt x 252.945pt>
 File: results1.pdf Graphic file (type pdf)
 <use results1.pdf>
-Package pdftex.def Info: results1.pdf  used on input line 73.
+Package pdftex.def Info: results1.pdf  used on input line 100.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 
-Overfull \hbox (1.34912pt too wide) in paragraph at lines 73--74
+Overfull \hbox (1.34912pt too wide) in paragraph at lines 100--101
  [] 
  []
 
-<results2.pdf, id=12, 361.35pt x 252.945pt>
+<results2.pdf, id=13, 361.35pt x 252.945pt>
 File: results2.pdf Graphic file (type pdf)
 <use results2.pdf>
-Package pdftex.def Info: results2.pdf  used on input line 82.
+Package pdftex.def Info: results2.pdf  used on input line 109.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 
-Overfull \hbox (1.34912pt too wide) in paragraph at lines 82--83
+Overfull \hbox (1.34912pt too wide) in paragraph at lines 109--110
  [] 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <./results1.pdf> <./results2.pdf>] [4] (./report.aux)
 
@@ -161,29 +149,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1427 strings out of 479719
- 23602 string characters out of 5880575
- 316910 words of memory out of 5000000
- 19450 multiletter control sequences out of 15000+600000
- 475157 words of font info for 48 fonts, out of 8000000 for 9000
+ 1423 strings out of 479719
+ 23564 string characters out of 5880575
+ 315910 words of memory out of 5000000
+ 19448 multiletter control sequences out of 15000+600000
+ 474637 words of font info for 46 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,8n,62p,218b,245s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,8n,62p,239b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmitt10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022basic/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022basic/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (4 pages, 147499 bytes).
+cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (4 pages, 128794 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
