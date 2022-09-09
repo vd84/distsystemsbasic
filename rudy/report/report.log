@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  9 SEP 2022 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  9 SEP 2022 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -118,61 +118,29 @@ in-com-ing TCP-connections.
 [1
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `fig:results2 ' on page 2 undefined on input line 74.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 78.
-<results1.pdf, id=12, 361.35pt x 252.945pt>
-File: results1.pdf Graphic file (type pdf)
-<use results1.pdf>
-Package pdftex.def Info: results1.pdf  used on input line 84.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+(Font)              <10.95> on input line 85.
 
-Overfull \hbox (1.34912pt too wide) in paragraph at lines 84--85
- [] 
- []
-
-<results2.pdf, id=13, 361.35pt x 252.945pt>
-File: results2.pdf Graphic file (type pdf)
-<use results2.pdf>
-Package pdftex.def Info: results2.pdf  used on input line 93.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
-
-Overfull \hbox (1.34912pt too wide) in paragraph at lines 93--94
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2] [3 <./results1.pdf> <./results2.pdf>] [4] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[2] [3] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1423 strings out of 479719
- 23564 string characters out of 5880575
- 316910 words of memory out of 5000000
- 19448 multiletter control sequences out of 15000+600000
- 474637 words of font info for 46 fonts, out of 8000000 for 9000
+ 1403 strings out of 479719
+ 23206 string characters out of 5880575
+ 314886 words of memory out of 5000000
+ 19431 multiletter control sequences out of 15000+600000
+ 474329 words of font info for 45 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,8n,62p,239b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-0.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (4 pages, 127015 bytes).
+ 55i,6n,62p,239b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022basic/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (3 pages, 88131 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

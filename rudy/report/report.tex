@@ -56,6 +56,7 @@ spawn(fun() -> request(Client) end),
 
 We also try limiting the amount of processes being created in order to create a upper bound on the amount of threads being created by the computer
 
+By creating a worker pool of processes that keep hold of their own index, in order to distribute the workload across them.
 
 In order to handle these requests. We need to do some parsing of the http-request.
 
@@ -67,88 +68,44 @@ Fourthly we parse the body where we assume that the rest of the request is made 
 
 \section{Evaluation}
 
-\textit{If needed, you may provide figures or tables with main results
-  evaluating your proposals. For each seminar, we will provide you
-  with some guidance on which kind of evaluation you should do.}
+In order to evaluate the program, I used the test.erl and the test2.erl files.
 
-And Figures \ref{fig:results1} and \ref{fig:results2 } shows how to
-add a figure with some results. These figures have been created with
-gnuplot. There are tons of different kinds of plots that can be
-generated with gnuplot. Make sure to check out
-\url{http://gnuplot.info/demo/} and look at them so you can see what
-can you do with this program.
-
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{results1.pdf}
-    \caption{Some random results 1}
-    \label{fig:results1}
-  \end{center}
-\end{figure}
-
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{results2.pdf}
-    \caption{Some random results 2}
-    \label{fig:results2}
-  \end{center}
-\end{figure}
-
-To obtain these figures you have to:
-\begin{enumerate}
-
-\item Create the data file from the experiments (look at file
-  experiment.dat)
-
-\item Create a gnuplot file to create a figure in eps format (look at
-  files results1.plot and results2.plot). These files may be very
-  complex. But for the results we want to show, these examples are
-  enough. To create the eps figures, execute in terminal:
-
-\begin{verbatim}
-$> gnuplot results1.plot 
-\end{verbatim}
-
-\item As pdflatex does not recognize eps files, you must convert them
-  to pdf files. This is done by (it will generate a file
-  results1.pdf):
-
-\begin{verbatim}
-$> epstopdf results1.eps
-\end{verbatim}
-
-\item That's it! Just include the figure as shown in this template and
-  compile the latex as explained in the document ``Introduction to
-  \LaTeXe''.
-
-\end{enumerate}
-
-
-If you want, you can also create a table of results as Table
-\ref{tab:results}. If you look at the template code, you will see how
-to do a table in \LaTeX.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{lcc}
-First column & Second column & Third column\\\hline
-Case 1 & 1.1 & 1.2\\\hline
-Case 2 & 2.1 & 2.2\\\hline
-Case 3 & 3.1 & 3.2\\\hline
-\end{tabular}
-\caption{Some random results in a table}
-\label{tab:results}
-\end{table}
+The test.erl file does not create multiple nodes (clients).
+The test2.erl file does create multiple nodes (clients).
 
 \section{Conclusions}
 
+Using the test.erl with multiple threads does not improve performance since there are not multiple clients
 
+The test2.erl files uses multiple nodes and therefore using more threads improves the performance.
 
+I used 5 nodes and 100 requests per node.
 
-What have you learnt from the problem presented?
-Was it useful?
+\begin{center}
+  \begin{tabular}{||c c c c||} 
+   \hline
+   Threads & Response time (ms) \\ [0.5ex] 
+   \hline\hline
+   1 & 40531  \\ 
+   \hline
+   2 & 20259 \\
+   \hline
+   4 & 10133 \\
+   \hline
+   8 & 8279 \\ [1ex] 
+   \hline
+  \end{tabular}
+  \end{center}
 
+The program ran the slowest with one thread, and the fastest with 8 or more threads. This is probably because my computer has only 8 threads.
+
+Creating a lot of threads did not impact performance since using unlimited threads did not have any impact on performance, it performs as good as 8 threads.
+Going from one to two threads produces almost twice the performance.
+Going from two to four threads produces also almost twice the performance.
+Going from four to eight threads produces ~15 percent more performance.
+Using more than eight threads does not impact performance.
+
+I have learn't how to use the gen\_tcp package to handle HTTP-requests. I have also learn't how to parse a request using recursion.
+I have also learn't that using more processes for handling multiple client connecting makes a web-server more scalable (handle more requests).
 
 \end{document}
