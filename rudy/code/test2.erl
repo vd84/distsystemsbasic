@@ -5,7 +5,7 @@ parse() ->
     http:parse_request("GET /foo HTTP/1.1\r\nUser-Agent: Test\r\nAccept: anything\r\n\r\nThis is the body").
 
 bench(Host, Port) ->
-    bench(Host, Port, 5, 1500).
+    bench(Host, Port, 5, 100).
 
 bench(Host, Port, C, N) ->
     Start = now(),
@@ -53,6 +53,7 @@ request(Host, Port) ->
     Recv = gen_tcp:recv(Server, 0),
     case Recv of
      	{ok, _} ->
+            io:format("ok request ~w~n", [ok]),
      	    ok;
      	{error, Error} ->
      	    io:format("test: error: ~w~n", [Error])

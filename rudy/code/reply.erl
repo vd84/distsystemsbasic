@@ -34,11 +34,12 @@ request(Client) ->
 		{ok, Str} ->
 			Request = http:parse_request(Str),
 			Response = reply(Request),
-			gen_tcp:send(Client, Response);
+			gen_tcp:send(Client, Response),
+			gen_tcp:close(Client);
 		{error, Error} ->
-			io:format("rudy: error: ~w~n", [Error])
-			end,
-			gen_tcp:close(Client).
+			io:format("rudy: error: ~w~n", [Error]),
+			ok
+	end.
 
 reply({{get, URI, _}, Headers, Body}) ->
 	http:ok("You used GET " ++ Body);

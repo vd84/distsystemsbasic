@@ -2,7 +2,7 @@
 -export([start/2, stop/0]).
 
 start(Port, N) ->
-	register(rudy, init(Port, N)).
+	register(rudy, spawn(fun() -> init(Port, N) end)).
 	
 stop() ->
 	exit(whereis(rudy), "time to die").
@@ -55,6 +55,7 @@ request(Client) ->
 			gen_tcp:close(Client).
 
 reply({{get, URI, _}, Headers, Body}) ->
+	timer:sleep(40),
 	http:ok("You used GET " ++ Body);
 reply({{post, URI, _}, Headers, Body}) ->
 	http:ok("You used POST " ++ Body).
