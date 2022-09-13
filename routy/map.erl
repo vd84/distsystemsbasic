@@ -4,7 +4,7 @@
 new() -> 
     [].
 
-update(Node, Links, Map) -> 
+update(Node, Links, _) -> 
     [{Node, Links}].
 
 all_reachable(_, [], Reachable) -> Reachable;
@@ -12,7 +12,6 @@ all_reachable(Node, [{Node, List}|T], Reachable) ->
     all_reachable(Node, T, Reachable ++ List);
 all_reachable(Node, [_|T], Reachable) -> 
     all_reachable(Node, T, Reachable).
-
 
 all_nodes([], Nodes) -> Nodes;
 all_nodes([{Node, List}|T], Nodes) -> 
@@ -23,4 +22,3 @@ reachable(Node, Map) ->
 
 all_nodes(Map) ->
 	all_nodes(Map, []).
-	
