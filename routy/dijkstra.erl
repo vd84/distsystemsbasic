@@ -19,6 +19,5 @@ update(Node, N, Gateway, [H|T], Acc) ->
 update(Node, N, Gateway, Sorted) ->
 	update(Node, N, Gateway, Sorted, []).
 
-
 iterate(Sorted, Map, Table) ->
 	iterate(Sorted, Map, Table).
