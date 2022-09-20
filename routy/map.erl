@@ -13,7 +13,7 @@ all_reachable(Node, [{Node, List}|T], Reachable) ->
 all_reachable(Node, [_|T], Reachable) -> 
     all_reachable(Node, T, Reachable).
 
-all_nodes([], Nodes) -> Nodes;
+all_nodes([], Nodes) -> lists:usort(Nodes);
 all_nodes([{Node, List}|T], Nodes) -> 
 	All = lists:append(List, Nodes),
 	all_nodes(T, lists:append([Node], All)).
