@@ -11,6 +11,7 @@ compare(A, B) ->
             N1 < N2
     end.
 
+
 zero() ->
 	0.
 
@@ -41,6 +42,7 @@ clock(Nodes) ->
 	clock(Nodes, []).
 update(Node, Time, Clock) -> 
 	Updated_Clock = lists:keyreplace(Node, 1, Clock, {Node, Time}),
+	
 	lists:sort(fun compare/2, Updated_Clock).
 
 safe(Time, Clock) -> 
