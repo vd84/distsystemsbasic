@@ -11,7 +11,7 @@ loop(Clock, Queue) ->
 	receive
 		{log, From, Time, Msg} ->
 				Updated_Clock = time:update(From, Time, Clock),
-				Updated_Queue = lists:append([{From, Time, Msg}], Queue),
+				Updated_Queue = lists:keysort(2, lists:append([{From, Time, Msg}], Queue)),
 				New_Queue = print_queue(Updated_Queue, Updated_Clock, []),
 				loop(Updated_Clock, New_Queue);
 		stop ->
