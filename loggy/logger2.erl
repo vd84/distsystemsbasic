@@ -9,16 +9,23 @@ init(Nodes) ->
 
 loop(Clock, Queue) ->
 	receive
-		{log, From, Time, Msg} ->
+		{log, From, Time, Message} ->
 				Updated_Clock = time:update(From, Time, Clock),
-				Updated_Queue = lists:keysort(2, lists:append([{From, Time, Msg}], Queue)),
-				New_Queue = print_queue(Updated_Queue, Updated_Clock, []),
-				loop(Updated_Clock, New_Queue);
+				case time:safe(Time, Updated_Clock) of
+					true ->
+						log(From, Time, Message),
+						New_Queue = print_queue(Queue, Updated_Clock, []),
+						loop(Updated_Clock, New_Queue);
+					false -> 
+						Updated_Queue = lists:keysort(2, lists:append([{From, Time, Message}], Queue)),
+						New_Queue = print_queue(Updated_Queue, Updated_Clock, []),
+						loop(Updated_Clock, New_Queue)
+				end;
 		stop ->
 			ok
 	end.
 	log(From, Time, Msg) ->
-	io:format("log: ~w ~w ~p~n", [Time, From, Msg]).
+		io:format("log: ~w ~w ~p~n", [Time, From, Msg]).
 print_queue([], _, Kept) ->
 	Kept;
 print_queue([{From, Time, Message}|T], Clock, Kept) ->
