@@ -23,7 +23,7 @@ merge(Ti, Tj) ->
 			Ti;
 		_ -> 
 			Tj
-	end.
+	end.	
 
 leq(Ti, Tj) ->
 	case Ti =< Tj of
@@ -37,21 +37,15 @@ clock([], Acc) ->
 clock([H|T], Acc) -> 
 	Updated_Acc = lists:append([{H, 0}], Acc),
 	clock(T, Updated_Acc).
-clock(Nodes) -> 
+clock(Nodes) -> 	
 	clock(Nodes, []).
 update(Node, Time, Clock) -> 
-	{Found_Node, Found_Time} = lists:keyfind(Node, 1, Clock),
-	Updated_Clock = lists:keyreplace(Node, 1, Clock, {Found_Node, merge(Time, Found_Time)}),
-	io:format("updatedClock (~w) ~n", [Updated_Clock]),
+	Updated_Clock = lists:keyreplace(Node, 1, Clock, {Node, Time}),
 	lists:sort(fun compare/2, Updated_Clock).
 
 safe(Time, Clock) -> 
 	{_, Smallest_Time} = lists:nth(1, Clock),
-	io:format("updatedClock (~w) ~n", [Time]),
 
-	case leq(Time, Smallest_Time) of
-		true -> Time;
-		false -> Smallest_Time
-	end.
+	leq(Time, Smallest_Time).
 		
 
